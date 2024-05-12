@@ -13,6 +13,35 @@ class TeacherController extends Controller
         $items = Teacher::with(['profile'])->get();
         return $items;
     }
+    public function show($id){
+        $teacher = Teacher::find($id);
+        if (is_null($teacher)){
+            return ' Profesor buscado no existe';
+        }
+        return $teacher;
+    }
+    
+    public function store(Request $request){
+        
+        $params = $request->all();
+        $teacher = Teacher::create([
+            'name'=>$params['name'],
+            'surname'=>$params['surname'],
+            'profile_id'=>$params['profile_id']
+        ]);
+        return $teacher;
+    }
+
+    public function update($id, Request $request)
+    {
+        $params = $request->all();
+        $teacher = Teacher::find($id)->update([
+            'name'=>$params['name'],
+            'surname'=>$params['surname']
+        ]);
+
+        return $teacher ? ' Teacher fue actualizado.': 'Error al actualizar.';
+    }
 
     public function destroy($id){
         $item = Teacher::find($id)->delete();
