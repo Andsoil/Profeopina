@@ -62,8 +62,14 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => env('AUTH_MODEL', App\Models\User::class),
+            'model' => App\Models\User::class,
+            'table' => 'users',
+            'verify' => true, // Asegúrate de que esta opción esté establecida en true
         ],
+
+
+
+
 
         // 'users' => [
         //     'driver' => 'database',
@@ -89,7 +95,6 @@ return [
     | quickly generating a very large amount of password reset tokens.
     |
     */
-
     'passwords' => [
         'users' => [
             'provider' => 'users',
@@ -98,6 +103,7 @@ return [
             'throttle' => 60,
         ],
     ],
+
 
     /*
     |--------------------------------------------------------------------------

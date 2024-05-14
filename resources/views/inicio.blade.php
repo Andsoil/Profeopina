@@ -26,7 +26,7 @@
             </div>
             <div class="logo" >
                 <a href="https://www.facebook.com/profile.php?id=61557749877856"><img src="/imagenes/facebook.png" alt="profeopina"></a>
-                
+
             </div>
         </nav>
     </header>
@@ -44,7 +44,7 @@
     <div class="search-section">
         <form action="/buscar_profesor" method="GET">
             <input type="text" name="profesor" placeholder="Buscar profesor" class="search-input">
-            
+
         </form>
     </div>
     <input type="checkbox" id="btn-menu">
@@ -52,8 +52,8 @@
         <div class="cont-menu">
             <nav>
                 <a href="a">Inicio</a>
-                <a href="a">Iniciar sesión</a>
-                <a href="a">Registrarse</a>
+                <a href="{{route('login')}}" class="btn btn-outline-danger">Iniciar sesión</a>
+                <a href="{{route('register')}}" class="btn btn-outline-danger">Registrarse</a>
                 <a href="a">Contáctanos</a>
             </nav>
             <div>
@@ -65,8 +65,8 @@
 
 
     </div>
-    
-    
+
+
 
 </body>
 </html>
