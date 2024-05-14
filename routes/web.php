@@ -1,4 +1,5 @@
 <?php
+
 use App\Mail\TestEmail;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
@@ -8,16 +9,16 @@ Route::get('/', function () {
     return view('inicio');
 });
 
-
 // Rutas de Autenticación...
 Auth::routes(['verify' => true]);
-
 
 // Rutas protegidas que requieren autenticación
 Route::middleware(['auth'])->group(function () {
     Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 });
+
 Route::get('/send-test-email', function () {
-    Mail::to('recipient@example.com')->send(new TestEmail());
+    Mail::to('gulcochia97cancer@gmail.com')->send(new TestEmail());
     return 'Email sent!';
 });
+
