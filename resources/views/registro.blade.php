@@ -8,7 +8,7 @@
 <body>
     @extends('layouts.logins')
     @section('title','Registro de usuario')
-    @section('titulo','Registrarse')
+    @section('titulo','Registro de usuario')
     @section('comentario','Ingrese sus datos')
     @section('reenvio','¿Ya tienes una cuenta?')
 </body>
