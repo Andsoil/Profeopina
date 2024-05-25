@@ -21,4 +21,13 @@ Route::get('/send-test-email', function () {
     Mail::to('gulcochia97cancer@gmail.com')->send(new TestEmail());
     return 'Email sent!';
 });
+Route::get('/iniciarsesion', function () {
+    return view('iniciarsesion');
+})->name('iniciarsesion');
+Route::get('/inicio', function () {
+    return view('inicio');
+})->name('inicio');
+Route::get('/registro', function () {
+    return view('registro');
+})->name('registro');
 
