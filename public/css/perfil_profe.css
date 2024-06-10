@@ -1,0 +1,165 @@
+/* Estilos para el contenedor principal */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.profesor-perfil {
+    max-width: 800px; /* Establece el ancho máximo */
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px; /* Separación superior */
+    overflow: hidden; /* Para evitar desbordamientos */
+}
+.btn-guardar {
+    position: absolute;
+    top: 80px; /* Ajusta la posición según tu navbar */
+    right: 50px; /* Ajusta la posición según tu layout */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+/* Primera Parte */
+.profesor-info {
+    margin-bottom: 20px;
+}
+
+.profesor-foto {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #d9bc27;
+    margin-bottom: 10px;
+}
+
+.profesor-nombre {
+    font-size: 24px;
+    color: #333333;
+    margin: 10px 0;
+}
+
+.profesor-ciudad,
+.profesor-colegio {
+    font-size: 16px;
+    color: #666666;
+    margin: 5px 0;
+}
+
+/* Segunda Parte */
+.etiquetas-destacadas {
+    margin-top: 20px;
+}
+
+.etiquetas-destacadas h2 {
+    font-size: 20px;
+    color: #353564;
+    margin-bottom: 15px;
+}
+
+.etiquetas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.etiqueta {
+    background-color: #d9bc27;
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    cursor: default;
+}
+
+
+/* Tercera Parte: Según los reviews */
+.segun-reviews {
+    background-color: #e0e3e7;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    width: 100%;
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+.segun-reviews h2 {
+    font-size: 18px;
+    color: #353564;
+    margin-bottom: 10px;
+    
+}
+
+.segun-reviews ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.segun-reviews li {
+    font-size: 16px;
+    color: #333333;
+    margin: 5px 0;
+}
+
+.segun-reviews .azul {
+    color: #353564;
+    font-weight: bold;
+}
+/* Cuarta Parte: Botones */
+.botones {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.botones a {
+    text-decoration: none !important;
+}
+.boton {
+    background-color: #d9bc27;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.boton:hover {
+    background-color: #c7ab22;
+}
+/* Quinta Parte: Enlace */
+.enlace-profesor {
+    margin-top: 20px;
+}
+
+.enlace-texto {
+    color: #d9bc27;
+    text-decoration: none ;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.enlace-texto:hover {
+    text-decoration: underline;
+}

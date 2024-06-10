@@ -29,7 +29,9 @@ Route::get('/registro', function () {
 Route::get('/contactanos', function () {
     return view('contactanos');
 })->name('contactanos');
-
+Route::get('/prueba', function () {
+    return view('perfil_profe');
+});
 // Ruta para probar el envío de correos
 Route::get('/send-test-email', function () {
     $details = [
