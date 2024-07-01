@@ -38,10 +38,20 @@ Route::get('/listaresenia', function () {
 })->name('listaresenia');
 Route::get('/iniciol', function () {
     return view('iniciologueado');
-})->name('iniciol');
+})->name('iniciologueado');
 Route::get('/tuperfil', function () {
     return view('tuperfil');
 })->name('tuperfil');
+Route::get('/turesenia', function () {
+    return view('turesenia');
+})->name('turesenia');
+Route::get('/profeguardado', function () {
+    return view('profguardados');
+})->name('profeguardado');
+Route::get('/configuracion', function () {
+    return view('configcuenta');
+})->name('configuracion');
+
 
 
 // Ruta para probar el envío de correos

@@ -21,7 +21,7 @@
         </div>
         <nav class="right-section">
             <div class="logo">
-                <img src="/imagenes/twitter.png" alt="profeopina">
+                <img src="/imagenes/traducir.png" alt="profeopina">
             </div>
             <div class="logo" >
                 <a href="https://www.facebook.com/profile.php?id=61557749877856"><img src="/imagenes/facebook.png" alt="profeopina"></a>
@@ -35,6 +35,7 @@
     <div class="container-menu">
         <div class="cont-menu">
             <nav>
+                <a href="{{route('iniciologueado')}}">Inicio</a>
                 <a href="{{route('tuperfil')}}">Perfil</a>
                 <a href="" class="btn btn-outline-danger">Tus reseñas</a>
                 <a href="" class="btn btn-outline-danger">Profesores guardados</a>

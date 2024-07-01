@@ -21,7 +21,7 @@
         </div>
         <nav class="right-section">
             <div class="logo">
-                <img src="/imagenes/twitter.png" alt="profeopina">
+                <img src="/imagenes/traducir.png" alt="profeopina">
             </div>
             <div class="logo" >
                 <a href="https://www.facebook.com/profile.php?id=61557749877856"><img src="/imagenes/facebook.png" alt="profeopina"></a>
