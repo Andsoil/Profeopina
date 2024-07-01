@@ -1,0 +1,16 @@
+.profile-container {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente si hay espacio disponible */
+    height: 100vh; /* Ajusta la altura al 100% de la vista */
+    text-align: center; /* Alinea el texto al centro */
+}
+
+.container {
+    max-width: 600px; /* Ajusta el ancho máximo del contenedor */
+    margin: auto; /* Centra el contenedor horizontalmente */
+}
+
+.profile-details p {
+    text-align: left; /* Alinea el texto de los detalles a la izquierda */
+}
