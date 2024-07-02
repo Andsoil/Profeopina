@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\TestMail;
 
-Route::get('/', function () {
+Route::get('/{local}/inicio', function ($locale) {
     return view('inicio');
 });
 
