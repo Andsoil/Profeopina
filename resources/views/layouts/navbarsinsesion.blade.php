@@ -21,7 +21,14 @@
         </div>
         <nav class="right-section">
             <div class="logo">
-                <img src="/imagenes/traducir.png" alt="profeopina">
+                <a href="{{ route('locale.change', ['locale' => 'en']) }}">
+                    <img src="/imagenes/en.png" alt="Traducir a Inglés">
+                </a>
+            </div>
+            <div class="logo">
+                <a href="{{ route('locale.change', ['locale' => 'es']) }}">
+                    <img src="/imagenes/es.png" alt="Traducir a Español">
+                </a>
             </div>
             <div class="logo" >
                 <a href="https://www.facebook.com/profile.php?id=61557749877856"><img src="/imagenes/facebook.png" alt="profeopina"></a>

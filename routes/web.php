@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\TestMail;
 
+
+
 Route::get('/', function () {
     return view('inicio');
 });
@@ -65,3 +67,16 @@ Route::get('/send-test-email', function () {
     return 'Email sent successfully!';
 });
 
+
+/*Route::get('locale/{locale}', function ($locale) {
+    //session(['locale' => $locale]);
+    return redirect()->back()->withCookie('locale', $locale);
+})->name('locale.change');
+/*Route::middleware(LocalCookieMiddleware::class)->group(function {
+    require __DIR__ . '/auth.php';
+});*/
+//require __DIR__ . '/auth.php';*/
+Route::get('locale/{locale}', function ($locale) {
+    session(['locale' => $locale]);
+    return redirect()->back();
+})->name('locale.change');

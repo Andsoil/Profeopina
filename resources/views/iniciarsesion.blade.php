@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,9 @@
 </head>
 <body>
     @extends('auth.login')
-    @section('title','Iniciar sesion')
-    @section('titulo','Iniciar sesion')
-    @section('comentario','Comenzemos completando el siguiente formulario')
-    @section('reenvio','¿Haz olvidado tu contraseña?')
+    @section('title', __('messages.login_title'))
+    @section('titulo', __('messages.login'))
+    @section('comentario', __('messages.login_comment'))
+    @section('reenvio', __('messages.forgot_password'))
 </body>
 </html>
-

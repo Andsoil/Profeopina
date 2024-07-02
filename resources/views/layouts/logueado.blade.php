@@ -1,12 +1,11 @@
-<!-- resources/views/tuperfil.blade.php -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/logueado.css">
-    <title>Perfil</title>
+    <title>{{ __('messages.profile_title') }}</title>
 </head>
 <body>
     @extends('layouts.navbarconsesion')
@@ -14,11 +13,11 @@
     <div class="profile-container">
         <div class="container">
             <!-- Saludo al usuario -->
-            <h1 class="display-4">Hola, </h1>
+            <h1 class="display-4">{{ __('messages.hello') }},</h1>
             <p class="lead">@yield('titulo')</p>
             <hr class="my-4">
         
-            <!-- Detalwhite; /*s del perfil -->
+            <!-- Detalles del perfil -->
             <div class="profile-details">
                 @yield('contenido')
             </div>

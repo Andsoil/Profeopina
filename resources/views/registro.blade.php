@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,9 +7,8 @@
 </head>
 <body>
     @extends('auth.register')
-    @section('title','Registro de usuario')
-    @section('titulo','Registro de usuario')
-    @section('comentario','Ingrese sus datos')
-    @section('reenvio','¿Ya tienes una cuenta?')
+    
+    
+    @section('reenvio','¿Ya tienes una cuaenta?')
 </body>
 </html>

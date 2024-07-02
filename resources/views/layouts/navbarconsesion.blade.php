@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,11 +21,17 @@
         </div>
         <nav class="right-section">
             <div class="logo">
-                <img src="/imagenes/traducir.png" alt="profeopina">
+                <a href="{{ route('locale.change', ['locale' => 'en']) }}">
+                    <img src="/imagenes/en.png" alt="{{ __('messages.translate_english') }}">
+                </a>
+            </div>
+            <div class="logo">
+                <a href="{{ route('locale.change', ['locale' => 'es']) }}">
+                    <img src="/imagenes/es.png" alt="{{ __('messages.translate_spanish') }}">
+                </a>
             </div>
             <div class="logo" >
                 <a href="https://www.facebook.com/profile.php?id=61557749877856"><img src="/imagenes/facebook.png" alt="profeopina"></a>
-
             </div>
         </nav>
     </header>
@@ -35,21 +41,20 @@
     <div class="container-menu">
         <div class="cont-menu">
             <nav>
-                <a href="{{route('iniciologueado')}}">Inicio</a>
-                <a href="{{route('tuperfil')}}">Perfil</a>
-                <a href="" class="btn btn-outline-danger">Tus reseñas</a>
-                <a href="" class="btn btn-outline-danger">Profesores guardados</a>
-                <a href="" class="btn btn-outline-danger">Configuraciones de la cuenta</a>
-                <a href="">Contáctanos</a>
-                <a href="">Cerrar sesion</a>
+                <a href="{{route('iniciologueado')}}">{{ __('messages.home') }}</a>
+                <a href="{{route('tuperfil')}}">{{ __('messages.profile') }}</a>
+                <a href="{{route('turesenia')}}" class="btn btn-outline-danger">{{ __('messages.your_reviews') }}</a>
+                <a href="{{route('profeguardado')}}" class="btn btn-outline-danger">{{ __('messages.saved_teachers') }}</a>
+                <a href="{{route('configuracion')}}" class="btn btn-outline-danger">{{ __('messages.account_settings') }}</a>
+                <a href="{{route('contactanos')}}">{{ __('messages.contact_us') }}</a>
+                <a href="">{{ __('messages.logout') }}</a>
             </nav>
             <div>
-                <label for="btn-menu" class=icon-equis>
+                <label for="btn-menu" class="icon-equis">
                     <img src="/imagenes/xazul.png" alt="x">
                 </label>
             </div>
         </div>
-
-
-
     </div>
+</body>
+</html>

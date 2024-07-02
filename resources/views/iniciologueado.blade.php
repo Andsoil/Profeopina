@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +9,11 @@
 </head>
 <body>
     @extends('layouts.navbarconsesion')
-    @section('titulo','ProfeOpina')
+    @section('titulo', __('messages.profeopina'))
     @section('content')
     <div class="centered-images">
         <div>
-            <h1>BIENVENIDO A</h1>
+            <h1>{{ __('messages.welcome_to') }}</h1>
         </div>
         <div>
             <img src="/logos/Logo_subtitle.svg" alt="logo">
@@ -24,7 +24,7 @@
     </div>
     <div class="search-section">
         <form action="/buscar_profesor" method="GET">
-            <input type="text" name="profesor" placeholder="Buscar profesor" class="search-input">
+            <input type="text" name="profesor" placeholder="{{ __('messages.search_teacher') }}" class="search-input">
 
         </form>
     </div>

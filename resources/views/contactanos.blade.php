@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,22 +16,22 @@
                 <h2>@yield('comentario')</h2>
                 
                 <form action="/login" method="POST">
-                    <h3>Correo</h3>
+                    <h3>{{ __('messages.email') }}</h3>
                     <div class="input-group">
                         <input type="text" id="text"  name="text" required>
                     </div>
-                    <h3>Tipo de consulta</h3>
+                    <h3>{{ __('messages.typeconsult') }}</h3>
                     <div class="input-group">
                         <select name="consulta" id="lang">
-                            <option value="queja">Queja</option>
-                            <option value="aviso">Aviso</option>
+                            <option value="queja">{{ __('messages.complaint') }}</option>
+                            <option value="aviso">{{ __('messages.warning') }}</option>
                         </select>
                     </div>  
-                    <h3>Comentario</h3>
+                    <h3>{{ __('messages.comment') }}</h3>
                     <div class="input-group">
                         <input type="text" id="text"  name="text" required>
                     </div>             
-                    <button type="submit" class="btn-continue">Enviar</button>
+                    <button type="submit" class="btn-continue">{{ __('messages.send') }}</button>
                     <a href="/password/reset" class="forgot-password">@yield('reenvio')</a>
                 </form>
             </div>

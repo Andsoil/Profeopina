@@ -8,7 +8,7 @@
 </head>
 <body>
     @extends('layouts.logueado')
-    @section('titulo','Tus reseñas')
+    @section('titulo',__('messages.youreviews'))
     @section('contenido')
         
     @endsection
