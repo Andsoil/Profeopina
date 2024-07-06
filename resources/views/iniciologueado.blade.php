@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/css/inicio.css">
     <title>Document</title>
+    <script src="/js/cambio.js"></script>
 </head>
 <body>
     @extends('layouts.navbarconsesion')
@@ -16,7 +17,7 @@
             <h1>{{ __('messages.welcome_to') }}</h1>
         </div>
         <div>
-            <img src="/logos/Logo_subtitle.svg" alt="logo">
+            <img id="subtitulo" src="/logos/Logo_subtitle.svg" alt="logo">
             <div class="icon">
                 <img src="/logos/Logo_icon.svg" alt="logo">
             </div>

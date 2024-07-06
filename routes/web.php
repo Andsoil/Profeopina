@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\TestMail;
 
+use Illuminate\Support\Facades\App;
+
 
 
 Route::get('/', function () {
@@ -80,3 +82,9 @@ Route::get('locale/{locale}', function ($locale) {
     session(['locale' => $locale]);
     return redirect()->back();
 })->name('locale.change');
+
+Route::get('/{lang}', function ($lang) {
+    App::setLocale($lang);
+    session(['locale' => $lang]);
+    return redirect()->back();
+});

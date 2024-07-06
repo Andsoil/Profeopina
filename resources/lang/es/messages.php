@@ -76,6 +76,8 @@ return [
     'complaint' => 'Queja',
     'warning' => 'Advertencia',
     'saveprof' => 'Tus profesores guardados',
-    'youreviews' => 'Tus reseñas'
+    'youreviews' => 'Tus reseñas',
+    'inicio' => 'Inicio'
+    
 ];
 

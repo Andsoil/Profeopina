@@ -80,6 +80,7 @@ return [
     'complaint' => 'Complaint',
     'warning' => 'Warning',
     'saveprof' => 'Your saved teachers',
-    'youreviews' => 'Your reviews'
+    'youreviews' => 'Your reviews',
+    'inicio' => 'Home'
 ];
 
