@@ -47,7 +47,7 @@ return [
     'view_reviews' => 'Ver reseñas',
     'add_review' => 'Añadir reseña',
     'are_you_the_teacher' => '¿Eres el profesor?',
-
+    'bye' => 'Adios',
     'review_list_title' => 'Lista de Reseñas',
     'teacher_reviews' => 'Reseñas del Profesor',
     'review_title_1' => 'Gran Profesor',
