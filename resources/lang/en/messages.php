@@ -17,7 +17,7 @@ return [
     'login' => 'Login',
     'login_comment' => 'Let\'s start by completing the following form',
     'forgot_password' => 'Forgot your password?',
-
+    'bye' => 'Bye',
     'remember_me' => 'Remember me',
     
     'login_button' => 'Login',
