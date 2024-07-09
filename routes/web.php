@@ -78,6 +78,7 @@ Route::get('/send-test-email', function () {
     require __DIR__ . '/auth.php';
 });*/
 //require __DIR__ . '/auth.php';*/
+//si la URL es locale/en, el valor de $locale será en.
 Route::get('locale/{locale}', function ($locale) {
     session(['locale' => $locale]);
     return redirect()->back();

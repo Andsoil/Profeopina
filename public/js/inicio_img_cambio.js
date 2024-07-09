@@ -1,4 +1,3 @@
-// public/js/inicio_img_cambio.js
 
 document.addEventListener('DOMContentLoaded', function() {
     const logoImage = document.getElementById('logo-title');
@@ -7,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to change the language and logo
     window.changeLanguage = function(language) {
+        //Guarda el idioma seleccionado para recordar entre sesiones del navegador
         localStorage.setItem('language', language);
         changeLogo(language);
         // Redirect to the language-specific URL
