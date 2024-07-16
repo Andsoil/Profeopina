@@ -41,6 +41,13 @@
       0 => 'LaravelLang\\Locales\\ServiceProvider',
     ),
   ),
+  'laravel-lang/models' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'LaravelLang\\Models\\ServiceProvider',
+    ),
+  ),
   'laravel-lang/publisher' => 
   array (
     'providers' => 

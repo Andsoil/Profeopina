@@ -21,6 +21,10 @@ return new class extends Migration
             $table->foreignId('current_team_id')->nullable();
             $table->string('profile_photo_path', 2048)->nullable();
             $table->timestamps();
+
+            // Índices
+            $table->index('email_verified_at');
+            $table->index('current_team_id');
         });
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
