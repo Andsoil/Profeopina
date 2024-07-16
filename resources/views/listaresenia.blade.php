@@ -13,17 +13,18 @@
     <div class="contenedor">
         <h1 class="titulo">{{ __('messages.teacher_reviews') }}</h1>
         <div class="lista-resenias">
-            <div class="resenia">
-                <h3 class="resenia-titulo">{{ __('messages.review_title_1') }}</h3>
-                <p class="resenia-autor">{{ __('messages.written_by') }}: {{ __('messages.student_1') }}</p>
-                <p class="resenia-texto">{{ __('messages.review_text_1') }}</p>
-            </div>
-            <div class="resenia">
-                <h3 class="resenia-titulo">{{ __('messages.review_title_2') }}</h3>
-                <p class="resenia-autor">{{ __('messages.written_by') }}: {{ __('messages.student_2') }}</p>
-                <p class="resenia-texto">{{ __('messages.review_text_2') }}</p>
-            </div>
-            <!-- Añade más reseñas aquí -->
+            @if($resenias->isEmpty())
+                <p class="no-resenias">{{ __('messages.no_reviews') }}</p>
+            @else
+                @foreach ($resenias as $resenia)
+                    <div class="resenia">
+                        <p class="resenia-calificacion">
+                            {{ $resenia->calificacion }} estrellas
+                        </p>
+                        <p class="resenia-texto">{{ $resenia->contenido }}</p>
+                    </div>
+                @endforeach
+            @endif
         </div>
         <div class="botones">
             <a href="{{ route('perfil') }}" class="boton">{{ __('messages.back_to_profile') }}</a>

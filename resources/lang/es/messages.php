@@ -77,7 +77,14 @@ return [
     'warning' => 'Advertencia',
     'saveprof' => 'Tus profesores guardados',
     'youreviews' => 'Tus reseñas',
-    'inicio' => 'Inicio'
-    
+    'inicio' => 'Inicio',
+    'description' => 'Descripcion',
+    'user' => 'Usuario',
+    'descmax' => 'Descuento maximo ',
+    'cellphone' => 'Celular',
+    'tax' => 'Impuesto',
+    'money' => 'Soles',
+    'teacher' => 'Profesor',
+    'no_reviews' => 'No hay reseñas disponibles'
 ];
 

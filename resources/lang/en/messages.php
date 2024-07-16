@@ -19,15 +19,15 @@ return [
     'forgot_password' => 'Forgot your password?',
     'bye' => 'Bye',
     'remember_me' => 'Remember me',
-    
+    'description' => 'Description',
     'login_button' => 'Login',
     'translate_english' => 'Translate to English',
     'translate_spanish' => 'Translate to Spanish',
     'home' => 'Home',
-  
+    'user' => 'User',
     'your_reviews' => 'Your Reviews',
     'saved_teachers' => 'Saved Teachers',
-  
+    'descmax' => 'Maximum discount ',
     'contact_us' => 'Contact Us',
     'logout' => 'Logout',
     'document_title' => 'Teacher Profile',
@@ -51,7 +51,7 @@ return [
     'view_reviews' => 'View Reviews',
     'add_review' => 'Add Review',
     'are_you_the_teacher' => 'Are you the teacher?',
-    
+    'cellphone' => 'Phone',
     'review_list_title' => 'Review List',
     'teacher_reviews' => 'Teacher Reviews',
     'review_title_1' => 'Great Teacher',
@@ -65,7 +65,7 @@ return [
     'profeopina' => 'ProfeOpina',
     'welcome_to' => 'WELCOME TO',
     'search_teacher' => 'Search teacher',
-    
+    'teacher' => 'Teacher',
     'confirm_password' => 'Confirm Password',
     'agree_terms_privacy' => 'I agree to the :terms_of_service and :privacy_policy',
     'terms_of_service' => 'Terms of Service',
@@ -81,6 +81,10 @@ return [
     'warning' => 'Warning',
     'saveprof' => 'Your saved teachers',
     'youreviews' => 'Your reviews',
-    'inicio' => 'Home'
+    'inicio' => 'Home',
+    'tax' => 'Tax',
+    'money' => 'Euro',
+    
+    'no_reviews' => 'No reviews available'
 ];
 

@@ -79,6 +79,7 @@ return [
     */
     'locales' => ['en', 'es'],
 
+    
 
     //'locale' => env('APP_LOCALE', 'en'),
 

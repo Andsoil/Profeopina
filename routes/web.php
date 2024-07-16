@@ -3,9 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\TestMail;
-
+use App\Http\Controllers\SalesController;
 use Illuminate\Support\Facades\App;
-
+use App\Http\Controllers\ReseniaController;
+use App\Http\Controllers\ProfesorController;
 
 
 Route::get('/', function () {
@@ -37,15 +38,16 @@ Route::get('/contactanos', function () {
 Route::get('/perfil', function () {
     return view('perfil_profe');
 })->name('perfil');
-Route::get('/listaresenia', function () {
-    return view('listaresenia');
-})->name('listaresenia');
+Route::get('/listaresenia', [ReseniaController::class, 'index'])->name('listaresenia');
 Route::get('/iniciol', function () {
     return view('iniciologueado');
 })->name('iniciologueado');
 Route::get('/tuperfil', function () {
     return view('tuperfil');
 })->name('tuperfil');
+Route::get('/busqueda', function () {
+    return view('busqueda');
+})->name('busqueda');
 Route::get('/turesenia', function () {
     return view('turesenia');
 })->name('turesenia');
@@ -55,9 +57,17 @@ Route::get('/profeguardado', function () {
 Route::get('/configuracion', function () {
     return view('configcuenta');
 })->name('configuracion');
+/*Route::get('/ventas', function () {
+    return view('ventas');
+})->name('ventas');*/
+Route::get('/ventas', [
+    SalesController::class, 'index'
+    ])->name('ventas');
 
+    
 
-
+Route::get('/buscar_profesor', [ProfesorController::class, 'buscar'])->name('buscar.profesor');
+Route::get('/profesor/{id}', [ProfesorController::class, 'show'])->name('perfil.profesor');
 // Ruta para probar el envío de correos
 Route::get('/send-test-email', function () {
     $details = [

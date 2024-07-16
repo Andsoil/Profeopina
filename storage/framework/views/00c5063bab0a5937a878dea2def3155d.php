@@ -13,17 +13,18 @@
     <div class="contenedor">
         <h1 class="titulo"><?php echo e(__('messages.teacher_reviews')); ?></h1>
         <div class="lista-resenias">
-            <div class="resenia">
-                <h3 class="resenia-titulo"><?php echo e(__('messages.review_title_1')); ?></h3>
-                <p class="resenia-autor"><?php echo e(__('messages.written_by')); ?>: <?php echo e(__('messages.student_1')); ?></p>
-                <p class="resenia-texto"><?php echo e(__('messages.review_text_1')); ?></p>
-            </div>
-            <div class="resenia">
-                <h3 class="resenia-titulo"><?php echo e(__('messages.review_title_2')); ?></h3>
-                <p class="resenia-autor"><?php echo e(__('messages.written_by')); ?>: <?php echo e(__('messages.student_2')); ?></p>
-                <p class="resenia-texto"><?php echo e(__('messages.review_text_2')); ?></p>
-            </div>
-            <!-- Añade más reseñas aquí -->
+            <?php if($resenias->isEmpty()): ?>
+                <p class="no-resenias"><?php echo e(__('messages.no_reviews')); ?></p>
+            <?php else: ?>
+                <?php $__currentLoopData = $resenias; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $resenia): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <div class="resenia">
+                        <p class="resenia-calificacion">
+                            <?php echo e($resenia->calificacion); ?> estrellas
+                        </p>
+                        <p class="resenia-texto"><?php echo e($resenia->contenido); ?></p>
+                    </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+            <?php endif; ?>
         </div>
         <div class="botones">
             <a href="<?php echo e(route('perfil')); ?>" class="boton"><?php echo e(__('messages.back_to_profile')); ?></a>

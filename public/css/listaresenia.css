@@ -12,6 +12,12 @@ body {
     max-width: 800px;
     padding: 20px;
 }
+.no-resenias {
+    text-align: center;
+    font-size: 1.5em;
+    color: #666;
+    margin-top: 20px;
+}
 
 .titulo {
     text-align: center;

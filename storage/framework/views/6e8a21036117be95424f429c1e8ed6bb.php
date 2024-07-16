@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="/css/inicio.css">
     <link rel="icon" href="/logos/Logo_icon.svg" type="image/png">
     <script src="/js/cambio.js"></script>
-    
 </head>
 <body>
     
@@ -25,13 +24,12 @@
         </div>
     </div>
     <div class="search-section">
-        <form action="/buscar_profesor" method="GET">
+        <form action="<?php echo e(route('buscar.profesor')); ?>" method="GET">
             <input type="text" name="profesor" placeholder="<?php echo e(__('messages.search_teacher')); ?>" class="search-input">
+            
         </form>
     </div>
     <?php $__env->stopSection(); ?>
-    
-    
 </body>
 </html>
 
