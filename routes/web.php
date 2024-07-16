@@ -4,11 +4,15 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\TestMail;
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\App;
 
 
 
 Route::get('/', function () {
+=======
+Route::get('/{local}/inicio', function ($locale) {
+>>>>>>> 51a93ded8d859d7148b94463e7db0dcbcaa40c8f
     return view('inicio');
 });
 
