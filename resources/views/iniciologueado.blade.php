@@ -15,6 +15,12 @@
     <div class="centered-images">
         <div>
             <h1>{{ __('messages.welcome_to') }}</h1>
+            <p>{{ __('messages.welcome_user', ['user' => Auth::guard('student')->user()->name]) }}</p> <!-- Mostrando el nombre del usuario -->
+            @if (Auth::guard('student')->check())
+    <p>Hola, {{ Auth::guard('student')->user()->name }}!</p>
+@else
+    <p>Usuario no autenticado.</p>
+@endif
         </div>
         <div>
             <img id="subtitulo" src="/logos/Logo_subtitle.svg" alt="logo">
@@ -26,10 +32,8 @@
     <div class="search-section">
         <form action="/buscar_profesor" method="GET">
             <input type="text" name="profesor" placeholder="{{ __('messages.search_teacher') }}" class="search-input">
-
         </form>
     </div>
     @endsection
-
 </body>
 </html>

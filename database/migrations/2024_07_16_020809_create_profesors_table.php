@@ -18,6 +18,7 @@ class CreateProfesorsTable extends Migration
             $table->string('nombre');
             $table->string('apellido');
             $table->string('especialidad')->nullable();
+            $table->string('foto');
             $table->timestamps();
         });
     }

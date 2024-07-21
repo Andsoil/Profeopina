@@ -1,1 +1,0 @@
-<?php /**PATH E:\instxampp\htdocs\www\opina\opina\resources\views/components/welcome.blade.php ENDPATH**/ ?>

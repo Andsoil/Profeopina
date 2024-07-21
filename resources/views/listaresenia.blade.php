@@ -11,7 +11,7 @@
     @extends('layouts.navbarsinsesion')
     @section('content')
     <div class="contenedor">
-        <h1 class="titulo">{{ __('messages.teacher_reviews') }}</h1>
+        <h1 class="titulo">{{ __('messages.teacher_reviews') }} - {{ $profesor->nombre }} {{ $profesor->apellido }}</h1>
         <div class="lista-resenias">
             @if($resenias->isEmpty())
                 <p class="no-resenias">{{ __('messages.no_reviews') }}</p>
@@ -19,7 +19,7 @@
                 @foreach ($resenias as $resenia)
                     <div class="resenia">
                         <p class="resenia-calificacion">
-                            {{ $resenia->calificacion }} estrellas
+                            {{ $resenia->calificacion }} <img src="/imagenes/estrella.png" alt="estrella" class="estrella">
                         </p>
                         <p class="resenia-texto">{{ $resenia->contenido }}</p>
                     </div>
@@ -27,7 +27,7 @@
             @endif
         </div>
         <div class="botones">
-            <a href="{{ route('perfil') }}" class="boton">{{ __('messages.back_to_profile') }}</a>
+            <a href="{{ route('perfil.profesor', ['id' => $profesor->id]) }}" class="boton">{{ __('messages.back_to_profile') }}</a>
             <a href="{{ route('iniciarsesion') }}" class="boton">{{ __('messages.add_review') }}</a>
         </div>
     </div>

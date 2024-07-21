@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="<?php echo e(str_replace('_', '-', app()->getLocale())); ?>">
-   <!--Devuelve el idioma actual, por ejemplo, 'en', 'es'-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +22,7 @@
         </div>
         <nav class="right-section">
             <div class="logo">
-                <a href="<?php echo e(route('locale.change', ['locale' => 'en'])); ?>" id="en-link" class="lang-link"  onclick="changeLanguage('en'); return false;">
+                <a href="<?php echo e(route('locale.change', ['locale' => 'en'])); ?>" id="en-link" class="lang-link" onclick="changeLanguage('en'); return false;">
                     <img src="/imagenes/en.png" alt="Traducir a Inglés">
                 </a>
             </div>
@@ -32,9 +31,8 @@
                     <img src="/imagenes/es.png" alt="Traducir a Español">
                 </a>
             </div>
-            <div class="logo" >
+            <div class="logo">
                 <a href="https://www.facebook.com/profile.php?id=61557749877856"><img src="/imagenes/facebook.png" alt="profeopina"></a>
-
             </div>
         </nav>
     </header>
@@ -46,20 +44,17 @@
         <div class="cont-menu">
             <nav>
                 <a href="<?php echo e(route('inicio')); ?>"><?php echo e(__('messages.inicio')); ?></a>
-                <a href="<?php echo e(route('iniciarsesion')); ?>" class="btn btn-outline-danger"><?php echo e(__('messages.login')); ?></a>
-                <a href="<?php echo e(route('registro')); ?>" class="btn btn-outline-danger"><?php echo e(__('messages.register')); ?></a>
+                <a href="<?php echo e(route('login.student')); ?>" class="btn btn-outline-danger"><?php echo e(__('messages.login')); ?></a>
+                <a href="<?php echo e(route('register.student')); ?>" class="btn btn-outline-danger"><?php echo e(__('messages.register')); ?></a>
                 <a href="<?php echo e(route('contactanos')); ?>"><?php echo e(__('messages.contact_us')); ?></a>
             </nav>
             <div>
-                <label for="btn-menu" class=icon-equis>
+                <label for="btn-menu" class="icon-equis">
                     <img src="/imagenes/xazul.png" alt="x">
                 </label>
             </div>
         </div>
-       
-
-
     </div>
-    
-  
+</body>
+</html>
 <?php /**PATH E:\instxampp\htdocs\www\opina\opina\resources\views/layouts/navbarsinsesion.blade.php ENDPATH**/ ?>

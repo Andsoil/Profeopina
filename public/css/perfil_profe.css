@@ -157,6 +157,46 @@ body, html {
     transition: background-color 0.3s;
     
 }
+/* Centrar el contenedor de las reseñas */
+.lista-resenias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para el contenedor de reseñas */
+.resenia {
+    background-color: #e0f2f1; /* Color de fondo azul suave */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    width: 80%; /* Puedes ajustar el ancho como prefieras */
+    max-width: 600px; /* Ancho máximo opcional */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinear contenido a la izquierda */
+}
+
+.resenia-calificacion {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 1.5em; /* Tamaño del número de la calificación */
+    display: flex;
+    align-items: center;
+}
+
+.resenia-texto {
+    margin-left: 10px; /* Espaciado a la izquierda */
+}
+.resenia-calificacion{
+    color: #1565c0;
+    margin-left: 10px;
+}
+.estrella {
+    width: 20px; /* Tamaño de la estrella */
+    height: 20px; /* Asegura que la estrella tenga altura consistente */
+    margin-left: 5px; /* Espacio entre el número y la estrella */
+}
 
 .boton:hover {
     background-color: #c7ab22;

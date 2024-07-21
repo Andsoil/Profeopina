@@ -37,6 +37,10 @@ h2 {
     align-items: center;
     margin-bottom: 20px;
     margin-left: 30px;
+    background-color: #e0e3e7;
+    padding: 15px;
+    border-radius: 8px;
+    
 }
 
 .profesor img {
@@ -47,6 +51,7 @@ h2 {
 
 .profesor-info {
     flex: 1;
+    padding: 5%;
 }
 
 .profesor-nombre {

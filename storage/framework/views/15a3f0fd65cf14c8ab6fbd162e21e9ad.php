@@ -12,7 +12,7 @@
     
     <?php $__env->startSection('titulo', __('messages.profile')); ?>
     <?php $__env->startSection('contenido'); ?>
-        <p><strong><?php echo e(__('messages.name')); ?>:</strong> </p>
+        <p><strong><?php echo e(__('messages.name')); ?><?php echo e(Auth::guard('student')->user()->name); ?>!:</strong> </p>
         <p><strong><?php echo e(__('messages.lastname')); ?>:</strong> </p>
         <p><strong><?php echo e(__('messages.institution')); ?>:</strong> </p>
         <p><strong><?php echo e(__('messages.graduation_year')); ?>:</strong> </p>

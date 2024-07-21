@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ __('messages.search_teacher') }}</title>
+    <title>{{ __('messages.search_results') }}</title>
     <link rel="stylesheet" href="/css/busqueda.css">
 </head>
 <body>
@@ -15,8 +15,7 @@
     
         <div class="search-container">
             <form action="{{ route('buscar.profesor') }}" method="GET">
-                <input type="text" name="profesor" placeholder="{{ __('messages.search_teacher') }}" class="search-input" value="{{ old('profesor', $query) }}">
-                
+                <input type="text" name="profesor" placeholder="{{ __('messages.teacher') }}" class="search-input">
             </form>
         </div>
     
@@ -29,10 +28,10 @@
                 @foreach ($resultados as $profesor)
                     <a href="{{ route('perfil.profesor', ['id' => $profesor->id]) }}" class="profesor-link">
                         <div class="profesor">
-                            <img src="{{ $profesor->ruta_de_la_imagen }}" alt="Foto del Profesor">
+                            <img src="{{ asset($profesor->foto) }}" alt="Foto del Profesor">
                             <div class="profesor-info">
                                 <div class="profesor-nombre">{{ $profesor->nombre }} {{ $profesor->apellido }}</div>
-                                <div class="profesor-detalles">{{ $profesor->detalles }}</div>
+                                <div class="profesor-detalles">{{ $profesor->especialidad }}</div>
                                 <!-- Agrega más detalles del profesor según sea necesario -->
                             </div>
                         </div>

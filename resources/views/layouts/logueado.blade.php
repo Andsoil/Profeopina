@@ -13,7 +13,7 @@
     <div class="profile-container">
         <div class="container">
             <!-- Saludo al usuario -->
-            <h1 class="display-4">{{ __('messages.hello') }},</h1>
+            <h1 class="display-4">{{ __('messages.hello') }}, {{ Auth::guard('student')->user()->name }}!</h1>
             <p class="lead">@yield('titulo')</p>
             <hr class="my-4">
         

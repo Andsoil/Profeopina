@@ -1,29 +1,27 @@
 <?php
 
+// database/migrations/2024_07_17_044441_create_resenias_table.php
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-return new class extends Migration
+class CreateReseniasTable extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('resenias', function (Blueprint $table) {
             $table->id();
+            $table->integer('profesor_id');
             $table->text('contenido');
-            $table->integer('calificacion')->unsigned(); // Nueva columna para la calificación
+            $table->integer('calificacion');
             $table->timestamps();
         });
+        
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('resenias');
     }
-};
+}

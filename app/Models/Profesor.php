@@ -1,5 +1,7 @@
 <?php
 
+// app/Models/Profesor.php
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -9,11 +11,10 @@ class Profesor extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'nombre',
-        'apellido',
-        'especialidad',
-    ];
+    protected $fillable = ['nombre', 'apellido', 'especialidad', 'foto'];
 
-    // Relaciones, métodos, y más aquí...
+    public function resenias()
+    {
+        return $this->hasMany(Resenia::class, 'profesor_id');
+    }
 }

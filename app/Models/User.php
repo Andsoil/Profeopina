@@ -62,7 +62,5 @@ class User extends Authenticatable implements MustVerifyEmail
             'password' => 'hashed',
         ];
     }
-    public function useresenia(){
-        return $this->hasMany(UserResenia::class, 'user_id');
-   }
+    
 }
