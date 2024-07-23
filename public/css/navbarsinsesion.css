@@ -55,6 +55,7 @@ body, html {
     transition: all 500ms case;
     opacity: 0;
     visibility: hidden;
+    
 }
 #btn-menu:checked ~ .container-menu{
     opacity: 1;
@@ -66,14 +67,15 @@ body, html {
     background: #ffffff;
     height: 100vh;
     position: relative;
-    transition: all 500ms case;
+    transition: transform 0.3s ease;
     transform: translateX(-100%);
 }
 #btn-menu:checked ~ .container-menu .cont-menu{
     transform: translateX(0%);
 }
 .cont-menu nav{
-    transform: translateY(15%);
+    padding-top: 40px; /* Ajusta este valor para bajar el texto más */
+    margin-left: 0; /* Ajusta este valor para eliminar el espacio a la izquierda */
 }
 .cont-menu nav a{
     display :block;
@@ -100,6 +102,8 @@ body, html {
     width: 20px;
     height: 20px;
 }
+
+
 
 
 

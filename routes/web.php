@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\App;
 use App\Http\Controllers\ReseniaController;
 use App\Http\Controllers\ProfesorController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\ProfesorLogController;
+use App\Http\Controllers\LoginController;
 
 // Rutas generales
 Route::get('/', function () {
@@ -34,9 +36,13 @@ Route::get('/iniciologueado', function () {
     return view('iniciologueado');
 })->name('iniciologueado');
 
-Route::get('/tuperfil', function () {
+/*Route::get('/tuperfil', function () {
     return view('tuperfil');
-})->name('tuperfil');
+})->name('tuperfil');*/
+// web.php
+
+Route::get('/tuperfil', [StudentController::class, 'showProfile'])->name('tuperfil');
+
 
 Route::get('/busqueda', function () {
     return view('busqueda');
@@ -79,9 +85,16 @@ Route::post('/login_student', [StudentController::class, 'login']);*/
 // Rutas específicas con controladores
 Route::get('/profesor/{id}/reseñas', [ProfesorController::class, 'verResenias'])->name('profesor.resenias');
 Route::get('/buscar_profesor', [ProfesorController::class, 'buscar'])->name('buscar.profesor');
-Route::get('/perfil_profesor/{id}', [ProfesorController::class, 'perfil'])->name('perfil.profesor');
+Route::get('/perfil_profesor/{id}', [ProfesorController::class, 'mostrarPerfil'])->name('perfil.profesor');
 Route::get('/listaresenia', [ReseniaController::class, 'index'])->name('listaresenia');
 
+Route::get('/profesorl/{id}/reseñas', [ProfesorLogController::class, 'verReseniasl'])->name('profesorlog.resenias');
+Route::get('/buscar_profesorl', [ProfesorLogController::class, 'buscarl'])->name('buscarlog.profesor');
+Route::get('/perfil_profesorl/{id}', [ProfesorLogController::class, 'mostrarPerfill'])->name('perfillog.profesor');
+Route::get('/listaresenia', [ReseniaController::class, 'index'])->name('listaresenia');
+Route::post('/profesor/{profesor}/add_review', [ProfesorLogController::class, 'addReview'])->name('add_review');
+Route::get('/perfilprofelogueado/{id}', [ProfesorLogController::class, 'mostrarPerfill'])->name('perfillog.profesor');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::get('/ventas', [SalesController::class, 'index'])->name('ventas');
 
 // Ruta para probar el envío de correos

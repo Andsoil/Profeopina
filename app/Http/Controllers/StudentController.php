@@ -34,22 +34,28 @@ class StudentController extends Controller
     }
 
     public function store(Request $request)
-{
-    $request->validate([
-        'name' => ['required', 'string', 'max:255'],
-        'email' => ['required', 'string', 'email', 'max:255', 'unique:students'],
-        'password' => ['required', 'string', 'min:8', 'confirmed'],
-    ]);
+    {
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:students'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
 
-    $student = Student::create([
-        'name' => $request->name,
-        'email' => $request->email,
-        'password' => Hash::make($request->password), // Asegúrate de que se usa Hash::make
-    ]);
+        $student = Student::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password), // Asegúrate de que se usa Hash::make
+        ]);
 
-    Auth::guard('student')->login($student);
+        Auth::guard('student')->login($student);
 
-    return redirect()->route('iniciologueado');
-}
+        return redirect()->route('iniciologueado');
+    }
+    public function showProfile()
+    {
+        $student = Auth::guard('student')->user();
+        return view('tuperfil', compact('student'));
+    }
+
 
 }

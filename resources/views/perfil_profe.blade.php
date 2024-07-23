@@ -13,9 +13,9 @@
     @section('content')
     <div class="container">
         <div class="profesor-perfil">
-            <button id="btn-guardar" class="btn-guardar" onclick="cambiarImagen()">
+            <!--<button id="btn-guardar" class="btn-guardar" onclick="cambiarImagen()">
                 <img id="icono-guardar" src="/imagenes/singuardar.png" alt="{{ __('messages.save') }}">
-            </button>
+            </button>-->
             <!-- Primera Parte: Foto, Nombre, Ciudad, Colegio -->
             <div class="profesor-info">
                 <img src="{{ asset($profesor->foto) }}" alt="{{ __('messages.teacher_photo') }}" class="profesor-foto">
@@ -42,7 +42,7 @@
             </div>
             <!-- Botones -->
             <div class="botones">
-                <a href="{{ route('iniciarsesion') }}" class="boton">{{ __('messages.add_review') }}</a>
+                <a href="{{ route('login.student') }}" class="boton">{{ __('messages.add_review') }}</a>
             </div>
             <!-- Enlace -->
             <div class="enlace-profesor">

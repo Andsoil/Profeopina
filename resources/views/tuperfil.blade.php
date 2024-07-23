@@ -12,10 +12,9 @@
     @extends('layouts.logueado')
     @section('titulo', __('messages.profile'))
     @section('contenido')
-        <p><strong>{{ __('messages.name') }}:</strong> </p>
-        <p><strong>{{ __('messages.lastname') }}:</strong> </p>
-        <p><strong>{{ __('messages.institution') }}:</strong> </p>
-        <p><strong>{{ __('messages.graduation_year') }}:</strong> </p>
+        <p><strong>{{ __('messages.name') }}:</strong> {{ $student->name }}</p>
+        <p><strong>{{ __('messages.email') }}:</strong> {{ $student->email }}</p>
+        <p><strong>{{ __('messages.password') }}:</strong> ********</p>
         <a href="#" class="editar">
             <i class="fas fa-pencil-alt"></i> <strong>{{ __('messages.edit') }}</strong>
         </a>

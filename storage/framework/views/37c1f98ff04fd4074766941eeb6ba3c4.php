@@ -14,14 +14,14 @@
     <?php $__env->startSection('content'); ?>
     <div class="centered-images">
         <div>
-            <h1><?php echo e(__('messages.welcome_to')); ?></h1>
-            <p><?php echo e(__('messages.welcome_user', ['user' => Auth::guard('student')->user()->name])); ?></p> <!-- Mostrando el nombre del usuario -->
+        <h1><?php echo e(__('messages.welcome_to')); ?></h1>
+            <!--<<p><?php echo e(__('messages.welcome_user', ['user' => Auth::guard('student')->user()->name])); ?></p>  Mostrando el nombre del usuario 
             <?php if(Auth::guard('student')->check()): ?>
     <p>Hola, <?php echo e(Auth::guard('student')->user()->name); ?>!</p>
 <?php else: ?>
     <p>Usuario no autenticado.</p>
 <?php endif; ?>
-        </div>
+        </div>-->
         <div>
             <img id="subtitulo" src="/logos/Logo_subtitle.svg" alt="logo">
             <div class="icon">
@@ -30,8 +30,9 @@
         </div>
     </div>
     <div class="search-section">
-        <form action="/buscar_profesor" method="GET">
+        <form action="<?php echo e(route('buscarlog.profesor')); ?>" method="GET">
             <input type="text" name="profesor" placeholder="<?php echo e(__('messages.search_teacher')); ?>" class="search-input">
+            
         </form>
     </div>
     <?php $__env->stopSection(); ?>

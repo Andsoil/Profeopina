@@ -46,7 +46,7 @@
                 <a href="<?php echo e(route('inicio')); ?>"><?php echo e(__('messages.inicio')); ?></a>
                 <a href="<?php echo e(route('login.student')); ?>" class="btn btn-outline-danger"><?php echo e(__('messages.login')); ?></a>
                 <a href="<?php echo e(route('register.student')); ?>" class="btn btn-outline-danger"><?php echo e(__('messages.register')); ?></a>
-                <a href="<?php echo e(route('contactanos')); ?>"><?php echo e(__('messages.contact_us')); ?></a>
+                <!--<<a href="<?php echo e(route('contactanos')); ?>"><?php echo e(__('messages.contact_us')); ?></a>>-->
             </nav>
             <div>
                 <label for="btn-menu" class="icon-equis">

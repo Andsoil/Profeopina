@@ -216,3 +216,50 @@ body, html {
 .enlace-texto:hover {
     text-decoration: underline;
 }
+/* Estilos para el modal */
+.modal-header {
+    background-color: #d9bc27; /* Cambia este color por el que desees */
+    color: white;
+}
+/* Estilos para el botón "Add Review" */
+/* Estilos para el botón "Add Review" */
+.btn-primary {
+    background-color: #d9bc27 !important; /* Color amarillo */
+    border: none !important;
+    color: white !important;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.show > .btn-primary.dropdown-toggle {
+    background-color: #b7961e !important; /* Amarillo más oscuro para el hover, focus, active */
+    border: none !important;
+    color: white !important;
+}
+
+/* Estilos para el botón dentro del modal */
+.modal-footer .btn-primary {
+    background-color: #d9bc27 !important; /* Color amarillo */
+    border: none !important;
+}
+
+.modal-footer .btn-primary:hover,
+.modal-footer .btn-primary:focus,
+.modal-footer .btn-primary:active,
+.modal-footer .btn-primary.active,
+.show > .modal-footer .btn-primary.dropdown-toggle {
+    background-color: #b7961e !important; /* Amarillo más oscuro para el hover, focus, active */
+    border: none !important;
+    color: white !important;
+}

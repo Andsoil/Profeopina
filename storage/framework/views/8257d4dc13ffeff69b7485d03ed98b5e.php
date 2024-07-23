@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/navbarsinsesion.css">
+    <link rel="stylesheet" href="/css/navbarconsesion.css">
     <link rel="icon" href="/logos/Logo_icon.svg" type="image/png">
     <script src="/js/inicio_img_cambio.js"></script>
 </head>
@@ -45,11 +45,18 @@
             <nav>
                 <a href="<?php echo e(route('iniciologueado')); ?>"><?php echo e(__('messages.home')); ?></a>
                 <a href="<?php echo e(route('tuperfil')); ?>"><?php echo e(__('messages.profile')); ?></a>
-                <a href="<?php echo e(route('turesenia')); ?>" class="btn btn-outline-danger"><?php echo e(__('messages.your_reviews')); ?></a>
-                <a href="<?php echo e(route('profeguardado')); ?>" class="btn btn-outline-danger"><?php echo e(__('messages.saved_teachers')); ?></a>
-                <a href="<?php echo e(route('configuracion')); ?>" class="btn btn-outline-danger"><?php echo e(__('messages.account_settings')); ?></a>
-                <a href="<?php echo e(route('contactanos')); ?>"><?php echo e(__('messages.contact_us')); ?></a>
-                <a href=""><?php echo e(__('messages.logout')); ?></a>
+                <!--<a href="<?php echo e(route('turesenia')); ?>" class="btn btn-outline-danger"><?php echo e(__('messages.your_reviews')); ?></a>>-->
+                <!--<a href="<?php echo e(route('profeguardado')); ?>" class="btn btn-outline-danger"><?php echo e(__('messages.saved_teachers')); ?></a>>-->
+                <!--<a href="<?php echo e(route('configuracion')); ?>" class="btn btn-outline-danger"><?php echo e(__('messages.account_settings')); ?></a>-->
+                <!--<<a href="<?php echo e(route('contactanos')); ?>"><?php echo e(__('messages.contact_us')); ?></a>>-->
+                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    <?php echo e(__('messages.logout')); ?>
+
+                </a>
+                <form id="logout-form" action="<?php echo e(route('logout')); ?>" method="POST" style="display: none;">
+                    <?php echo csrf_field(); ?>
+                </form>
+                
             </nav>
             <div>
                 <label for="btn-menu" class="icon-equis">

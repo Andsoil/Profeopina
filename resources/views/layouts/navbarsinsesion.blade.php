@@ -46,7 +46,7 @@
                 <a href="{{ route('inicio') }}">{{ __('messages.inicio') }}</a>
                 <a href="{{ route('login.student') }}" class="btn btn-outline-danger">{{ __('messages.login') }}</a>
                 <a href="{{ route('register.student') }}" class="btn btn-outline-danger">{{ __('messages.register') }}</a>
-                <a href="{{ route('contactanos') }}">{{ __('messages.contact_us') }}</a>
+                <!--<<a href="{{ route('contactanos') }}">{{ __('messages.contact_us') }}</a>>-->
             </nav>
             <div>
                 <label for="btn-menu" class="icon-equis">

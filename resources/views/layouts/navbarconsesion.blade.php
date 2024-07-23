@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/css/navbarsinsesion.css">
+    <link rel="stylesheet" href="/css/navbarconsesion.css">
     <link rel="icon" href="/logos/Logo_icon.svg" type="image/png">
     <script src="/js/inicio_img_cambio.js"></script>
 </head>
@@ -45,11 +45,17 @@
             <nav>
                 <a href="{{route('iniciologueado')}}">{{ __('messages.home') }}</a>
                 <a href="{{route('tuperfil')}}">{{ __('messages.profile') }}</a>
-                <a href="{{route('turesenia')}}" class="btn btn-outline-danger">{{ __('messages.your_reviews') }}</a>
-                <a href="{{route('profeguardado')}}" class="btn btn-outline-danger">{{ __('messages.saved_teachers') }}</a>
-                <a href="{{route('configuracion')}}" class="btn btn-outline-danger">{{ __('messages.account_settings') }}</a>
-                <a href="{{route('contactanos')}}">{{ __('messages.contact_us') }}</a>
-                <a href="">{{ __('messages.logout') }}</a>
+                <!--<a href="{{route('turesenia')}}" class="btn btn-outline-danger">{{ __('messages.your_reviews') }}</a>>-->
+                <!--<a href="{{route('profeguardado')}}" class="btn btn-outline-danger">{{ __('messages.saved_teachers') }}</a>>-->
+                <!--<a href="{{route('configuracion')}}" class="btn btn-outline-danger">{{ __('messages.account_settings') }}</a>-->
+                <!--<<a href="{{route('contactanos')}}">{{ __('messages.contact_us') }}</a>>-->
+                <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                    {{ __('messages.logout') }}
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
+                
             </nav>
             <div>
                 <label for="btn-menu" class="icon-equis">
