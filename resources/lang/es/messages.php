@@ -85,6 +85,9 @@ return [
     'tax' => 'Impuesto',
     'money' => 'Soles',
     'teacher' => 'Profesor',
-    'no_reviews' => 'No hay reseñas disponibles'
+    'no_reviews' => 'No hay reseñas disponibles',
+    'rating'=> 'Cuántas estrellas merece?',
+    'review' => 'Escriba su reseña',
+    'edit_profile' => 'Editar Perfil',
 ];
 

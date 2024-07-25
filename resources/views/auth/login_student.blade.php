@@ -33,12 +33,12 @@
                     </div>
                 </div>
 
-                <div class="block mt-4">
+                <!--<div class="block mt-4">
                     <label for="remember_me" class="flex items-center">
                         <x-checkbox id="remember_me" name="remember" />
                         <span class="ms-2 text-sm text-gray-600">{{ __('messages.remember_me') }}</span>
                     </label>
-                </div>
+                </div>-->
 
                 <div class="flex items-center justify-end mt-4">
                     <button type="submit" class="btn-continue ms-4">

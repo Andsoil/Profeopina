@@ -84,7 +84,9 @@ return [
     'inicio' => 'Home',
     'tax' => 'Tax',
     'money' => 'Euro',
-    
-    'no_reviews' => 'No reviews available'
+    'rating'=> 'How many stars does it deserve?',
+    'no_reviews' => 'No reviews available',
+    'review' => 'Write your review',
+    'edit_profile' => 'Edit Profile',
 ];
 

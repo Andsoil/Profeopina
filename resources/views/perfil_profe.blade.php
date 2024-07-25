@@ -45,9 +45,9 @@
                 <a href="{{ route('login.student') }}" class="boton">{{ __('messages.add_review') }}</a>
             </div>
             <!-- Enlace -->
-            <div class="enlace-profesor">
+            <!--<div class="enlace-profesor">
                 <a href="ruta_a_la_vista_del_profesor" class="enlace-texto">{{ __('messages.are_you_the_teacher') }}</a>
-            </div>
+            </div>-->
         </div>
     </div>
     @endsection

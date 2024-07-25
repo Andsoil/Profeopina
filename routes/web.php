@@ -10,6 +10,10 @@ use App\Http\Controllers\ProfesorController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ProfesorLogController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProfileController;
+
+
+
 
 // Rutas generales
 Route::get('/', function () {
@@ -95,6 +99,7 @@ Route::get('/listaresenia', [ReseniaController::class, 'index'])->name('listares
 Route::post('/profesor/{profesor}/add_review', [ProfesorLogController::class, 'addReview'])->name('add_review');
 Route::get('/perfilprofelogueado/{id}', [ProfesorLogController::class, 'mostrarPerfill'])->name('perfillog.profesor');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
+Route::put('/profile/update/{id}', [ProfileController::class, 'update'])->name('profile.update');
 Route::get('/ventas', [SalesController::class, 'index'])->name('ventas');
 
 // Ruta para probar el envío de correos
