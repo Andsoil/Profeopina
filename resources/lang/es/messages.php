@@ -89,5 +89,6 @@ return [
     'rating'=> 'Cuántas estrellas merece?',
     'review' => 'Escriba su reseña',
     'edit_profile' => 'Editar Perfil',
+    'meta_description' => 'Bienvenido a Profeopina, el mejor lugar para revisar y encontrar profesores.',
 ];
 

@@ -88,5 +88,7 @@ return [
     'no_reviews' => 'No reviews available',
     'review' => 'Write your review',
     'edit_profile' => 'Edit Profile',
+    
+    'meta_description' => 'Welcome to Profeopina, the best place to review and find teachers.',
 ];
 

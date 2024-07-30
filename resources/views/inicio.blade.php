@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/css/inicio.css">
     <link rel="icon" href="/logos/Logo_icon.svg" type="image/png">
     <script src="/js/cambio.js"></script>
+    <title>@yield('titulo', __('messages.profeopina'))</title>
+    <meta name="description" content="{{ __('messages.meta_description') }}">
 </head>
 <body>
     @extends('layouts.navbarsinsesion')
@@ -26,7 +28,6 @@
     <div class="search-section">
         <form action="{{ route('buscar.profesor') }}" method="GET">
             <input type="text" name="profesor" placeholder="{{ __('messages.search_teacher') }}" class="search-input">
-            
         </form>
     </div>
     @endsection

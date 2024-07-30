@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="/css/inicio.css">
     <link rel="icon" href="/logos/Logo_icon.svg" type="image/png">
     <script src="/js/cambio.js"></script>
+    <title><?php echo $__env->yieldContent('titulo', __('messages.profeopina')); ?></title>
+    <meta name="description" content="<?php echo e(__('messages.meta_description')); ?>">
 </head>
 <body>
     
@@ -26,7 +28,6 @@
     <div class="search-section">
         <form action="<?php echo e(route('buscar.profesor')); ?>" method="GET">
             <input type="text" name="profesor" placeholder="<?php echo e(__('messages.search_teacher')); ?>" class="search-input">
-            
         </form>
     </div>
     <?php $__env->stopSection(); ?>
