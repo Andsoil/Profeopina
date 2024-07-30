@@ -49,7 +49,7 @@ class StudentController extends Controller
 
         Auth::guard('student')->login($student);
 
-        return redirect()->route('iniciologueado');
+        return redirect()->route('login.student');
     }
     public function showProfile()
     {
