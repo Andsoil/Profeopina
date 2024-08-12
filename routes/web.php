@@ -11,6 +11,16 @@ use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ProfesorLogController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\VentaController;
+
+Route::get('/ventas', [VentaController::class, 'index'])->name('ventas.index');      // Mostrar listado de ventas
+Route::get('/ventas/create', [VentaController::class, 'create'])->name('ventas.create');  // Mostrar formulario de creación
+Route::post('/ventas', [VentaController::class, 'store'])->name('ventas.store');     // Guardar nueva venta
+Route::get('/ventas/{venta}', [VentaController::class, 'show'])->name('ventas.show');   // Mostrar detalles de una venta
+Route::get('/ventas/{venta}/edit', [VentaController::class, 'edit'])->name('ventas.edit'); // Mostrar formulario de edición
+Route::put('/ventas/{venta}', [VentaController::class, 'update'])->name('ventas.update');  // Actualizar una venta existente
+Route::delete('/ventas/{venta}', [VentaController::class, 'destroy'])->name('ventas.destroy'); // Eliminar una venta
+
 
 
 
@@ -100,7 +110,7 @@ Route::post('/profesor/{profesor}/add_review', [ProfesorLogController::class, 'a
 Route::get('/perfilprofelogueado/{id}', [ProfesorLogController::class, 'mostrarPerfill'])->name('perfillog.profesor');
 Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 Route::put('/profile/update/{id}', [ProfileController::class, 'update'])->name('profile.update');
-Route::get('/ventas', [SalesController::class, 'index'])->name('ventas');
+//Route::get('/ventas', [SalesController::class, 'index'])->name('ventas');
 
 // Ruta para probar el envío de correos
 Route::get('/send-test-email', function () {
