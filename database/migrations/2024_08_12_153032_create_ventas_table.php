@@ -20,7 +20,7 @@ class CreateVentasTable extends Migration
             $table->decimal('precio', 8, 2);
             $table->string('cliente');
             $table->date('fecha_venta');
-            // $table->timestamps(); // Agrega si quieres manejar timestamps
+            // $table->timestamps(); 
         });
     }
 

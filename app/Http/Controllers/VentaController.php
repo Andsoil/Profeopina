@@ -102,12 +102,11 @@ class VentaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Venta $venta)
+    public function destroy($id)
     {
-        // Eliminar la venta
-        $venta->delete();
+    $venta = Venta::findOrFail($id);
+    $venta->delete();
 
-        // Redirigir al índice de ventas con un mensaje de éxito
-        return redirect()->route('ventas.index')->with('success', 'Venta eliminada exitosamente.');
+    return redirect()->route('ventas.index')->with('success', 'Venta eliminada correctamente.');
     }
 }
