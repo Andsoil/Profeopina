@@ -29,6 +29,12 @@ class ProfesorsTableSeeder extends Seeder
             'especialidad' => 'Historia',
             'foto' => 'fotos/maria_garcia.jpg', // Asegúrate de que la ruta sea correcta
         ]);
+        Profesor::create([
+            'nombre' => 'Hubel',
+            'apellido' => 'Bonifacio',
+            'especialidad' => 'FIIS',
+            'foto' => 'fotos/hubel.jpg', // Asegúrate de que la ruta sea correcta
+        ]);
 
         // Agrega más profesores según sea necesario
     }
